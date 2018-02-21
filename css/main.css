@@ -1,0 +1,18 @@
+.container-create {
+  padding-top: 3em;
+  width: 100%;
+}
+
+.container-answer-update {
+  width: 60%;
+}
+
+.container-answer {
+  border-bottom: 1px solid #000;
+  padding-top: 2em;
+  width: 100%;
+}
+
+.container-footer {
+  margin-top: 5em;
+}
