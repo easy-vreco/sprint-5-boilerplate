@@ -16,3 +16,7 @@
 .container-footer {
   margin-top: 5em;
 }
+
+.btn-create, .btn-create:hover {
+  text-decoration: none;
+}
