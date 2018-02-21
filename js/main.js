@@ -13,7 +13,12 @@ $(document).ready(() => {
         if ($('.topics-container').children('.topic-row').length <= response.length) {
           let $divContainer = $('<div class="container text-center container-answer-update"></div>'); 
           $topicsContainer.find('.topic-row').append($divContainer);
-          $divContainer.html(`<div class="topic-content"><span class="col-4">${response[el].content} -</span><span class="col-4 float-left"> Por: ${response[el].author_name}</span><span class="col-4 float-right">Respuestas: ${response[el].responses_count}</span></div>`);
+          $divContainer.html(`<div class="topic-content"><span class="col-10">${response[el].content}</span>
+                              </div>
+                              <div class="topic-content">
+                              <span class="col-5 float-left"> Por: ${response[el].author_name}</span>
+                              <span class="col-5 float-right">Respuestas: ${response[el].responses_count}</span>
+                              </div>`);
         }
       });
     }, 
@@ -26,7 +31,7 @@ $(document).ready(() => {
 
   const searchTopics = function(topics) {
     let arrayTopics = topics.map((val) => val.content);
-    $('#search').autocomplete({
+    $('#input-search').autocomplete({
       source: arrayTopics
     });
   };

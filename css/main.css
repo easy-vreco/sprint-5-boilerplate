@@ -5,9 +5,9 @@
   display: flex;
 }
 
-/* .topic-content {
-  display: inline-block;
-}  */
+.topic-content {
+  word-wrap: break-word;
+} 
 
 #input-search {
   margin-right: .5em;
