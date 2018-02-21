@@ -20,3 +20,8 @@
 .btn-create, .btn-create:hover {
   text-decoration: none;
 }
+
+.col-message {
+  margin-top: 1em;
+  padding: .5em;
+}
