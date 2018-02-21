@@ -1,3 +1,14 @@
+
+.topic-row {
+    border: 2px solid black;
+    margin-top: 2em;
+    display: flex;
+}
+
+.topic-content {
+  display: inline-block;
+} 
+
 .container-create {
   padding-top: 3em;
   width: 100%;
