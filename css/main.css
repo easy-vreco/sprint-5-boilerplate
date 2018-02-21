@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .topic-row {
     border: 2px solid black;
     margin-top: 2em;
@@ -6,4 +7,27 @@
 
 .topic-content {
     display: inline-block;
+=======
+.container-create {
+  padding-top: 3em;
+  width: 100%;
+}
+
+.container-answer-update {
+  width: 60%;
+}
+
+.container-answer {
+  border-bottom: 1px solid #000;
+  padding-top: 2em;
+  width: 100%;
+}
+
+.container-footer {
+  margin-top: 5em;
+}
+
+.btn-create, .btn-create:hover {
+  text-decoration: none;
+>>>>>>> be86a01274ec6fe6d42f51800093d04a52bd9b69
 }

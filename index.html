@@ -15,12 +15,81 @@
     <title>Foro de Opinión</title>
   </head>
   <body>
-    <h1>Foro Themes :)</h1> 
     <main>
+      <section>
+        <div class="container container-create text-center">
+          <div class="row">
+            <div class="col-6 col-sm-6">
+              <h3>Foro Cool</h3>
+            </div>
+            <div class="col-6 col-sm-6">
+                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModalCenter">Crear tema</button>
+            </div>
+          </div>
+        </div>
+        <div class="container text-center container-answer-update">
+          <div class="row">
+            <!-- respuestas jaladas desde el DOM -->
+            <div class="container-answer">
+              <div class="col-6 float-left">Primer ejemplo de respuesta</div>
+              <div class="col-6 float-right">Respuesta 1</div>
+            </div>
+            <div class="container-answer">
+              <div class="col-6 float-left">Segundo ejemplo de respuesta</div>
+              <div class="col-6 float-right">Respuesta 2</div>
+            </div>
+            <div class="container-answer">
+              <div class="col-6 float-left">Tercer ejemplo de respuesta</div>
+              <div class="col-6 float-right">Respuesta 3</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de los topics-->
       <section>
         <div class="container topics-container"></div>
       </section>
+
+      <!-- Modal para crear tema -->
+      <section>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Tema</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <div class="col">
+                    <label for="inputEmail3" class="col-6 col-sm-6 col-form-label">Por:</label>
+                    <input type="text" class="form-control col-6 col-sm-6" placeholder="">
+                  </div>
+                  <div class="col">
+                    <label for="inputEmail3" class="col-6 col-sm-6 col-form-label">Mensaje:</label>
+                    <input type="text" class="form-control col-6 col-sm-6" placeholder="">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
     </main>
+
+    <footer class="container-footer">
+      <p class="lead text-center">Copyright&copy;</p>
+    </footer>
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
