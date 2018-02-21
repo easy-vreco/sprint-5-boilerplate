@@ -9,11 +9,11 @@ $(document).ready(() => {
       // console.log(response[el]);
       $.each(response, function(el) {
         let topic = response[el];
-        $topicsContainer.append('<row class="topic-row"></row>');
+        $topicsContainer.append('<div class="row topic-row"></div>');
         if ($('.topics-container').children('.topic-row').length <= response.length) {
-          let $divContainer = $('<div class="col-sm-12 col-md-12 col-lg-12 div-container"></div>'); 
+          let $divContainer = $('<div class="container text-center container-answer-update"></div>'); 
           $topicsContainer.find('.topic-row').append($divContainer);
-          $divContainer.html(`<div class="topic-content"><span>${response[el].content} -</span><span> Por:${response[el].author_name}</span></div><span>Respuestas:${response[el].responses_count}</span>`);
+          $divContainer.html(`<div class="topic-content"><span class="col-4">${response[el].content} -</span><span class="col-4 float-left"> Por: ${response[el].author_name}</span><span class="col-4 float-right">Respuestas: ${response[el].responses_count}</span></div>`);
         }
       });
     }, 
@@ -22,5 +22,27 @@ $(document).ready(() => {
         console.log(request.message);
       }
     }
+  });
+
+  const searchTopics = function(topics) {
+    let arrayTopics = topics.map((val) => val.content);
+    $('#search').autocomplete({
+      source: arrayTopics
+    });
+  };
+
+  $('#btn-save').on('click', () => {
+    let nameAuthor = ('#input-name').val();
+    let responseMessage = ('#input-messages').val();
+    $.post("http://examen-laboratoria-sprint-5.herokuapp.com/topics",
+    {
+      author_name: nameAuthor,
+      content: responseMessage
+    },
+    function(data, status){
+      let sectionTopics = $('box-topics').eq[0];
+      sectionTopics.html(`<div col-6 float-left">${data.author_name}</div><div class="col-6 float-right"><p>${data.content}</p></div>`);
+      // alert("Data: " + data + "\nStatus: " + status);
+    });
   });
 });

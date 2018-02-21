@@ -1,13 +1,17 @@
 
 .topic-row {
-    border: 2px solid black;
-    margin-top: 2em;
-    display: flex;
+    /* border: 2px solid black; */
+  margin-top: 2em;
+  display: flex;
 }
 
-.topic-content {
+/* .topic-content {
   display: inline-block;
-} 
+}  */
+
+#input-search {
+  margin-right: .5em;
+}
 
 .container-create {
   padding-top: 3em;
@@ -15,7 +19,7 @@
 }
 
 .container-answer-update {
-  width: 60%;
+  width: 100%;
 }
 
 .container-answer {
